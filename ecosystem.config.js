@@ -10,7 +10,10 @@ module.exports = {
                 NODE_ENV: 'production',
                 PORT: 3000,
                 HOSTNAME: '127.0.0.1'
-            }
+            },
+            error_file: 'logs/err.log',
+            out_file: 'logs/out.log',
+            log_date_format: 'YYYY-MM-DD HH:mm:ss'
         }
     ]
 };

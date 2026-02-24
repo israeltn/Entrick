@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e # Exit immediately if a command exits with a non-zero status
 
 # Configuration
 APP_DIR="/home/entricksystems/htdocs/entricksystems.com"
@@ -32,4 +33,7 @@ pm2 reload ecosystem.config.js || pm2 start ecosystem.config.js
 # Save PM2 state
 pm2 save
 
+echo "---------------------------------------------------"
 echo "✅ Deployment successful!"
+echo "📡 Check logs with: pm2 logs $APP_NAME"
+echo "---------------------------------------------------"
