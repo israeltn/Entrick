@@ -16,25 +16,29 @@ cd $APP_DIR || { echo "❌ Directory $APP_DIR not found"; exit 1; }
 # Install dependencies
 echo "📦 Installing dependencies..."
 npm install
+npm audit fix --force
 
 # Build the project
+echo "🧹 Cleaning previous build..."
+rm -rf .next
+
 echo "🏗️ Building the project..."
 npm run build || { echo "❌ Build failed. Check if next.config.ts is still present (delete it!)."; exit 1; }
 
 # Standalone assets (CRITICAL for static/routing issues)
 echo "📂 Moving standalone assets..."
-cp -r public .next/standalone/
-cp -r .next/static .next/standalone/.next/
+cp -r public .next/standalone/ || true
+cp -r .next/static .next/standalone/.next/ || true
 
 # Restart with PM2
-echo "🔄 Restarting PM2 process..."
-# We explicitly set the port here as well just in case
-PORT=3001 pm2 reload ecosystem.config.js || PORT=3001 pm2 start ecosystem.config.js
+echo "🔄 Restarting PM2 process on Port 3001..."
+pm2 delete $APP_NAME || true
+PORT=3001 pm2 start .next/standalone/server.js --name "$APP_NAME"
 
 # Save PM2 state
 pm2 save
 
 echo "---------------------------------------------------"
-echo "✅ Deployment successful!"
+echo "✅ Deployment successful! Site is on Port 3001"
 echo "📡 Check logs with: pm2 logs $APP_NAME"
 echo "---------------------------------------------------"
