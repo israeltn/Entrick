@@ -48,7 +48,7 @@ export default function HomePage() {
                 Redefining Efficiency
               </p>
               <h2 className="text-lg md:text-xl font-bold text-white mb-6 leading-tight">
-                We don&apos;t just deliver technology solutions, we transform how you work.
+                We don&apos;t just deliver technology solutions, we transform workflows and business outcomes.
               </h2>
               <p className="text-muted text-base mb-10 leading-relaxed">
                 Ensuring sustainable growth and competitive advantage through innovative technology partnerships and expert implementation.
