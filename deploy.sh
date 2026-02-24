@@ -14,7 +14,7 @@ cd $APP_DIR || { echo "❌ Directory $APP_DIR not found"; exit 1; }
 
 # Install dependencies
 echo "📦 Installing dependencies..."
-npm install --production
+npm install
 
 # Build the project
 echo "🏗️ Building the project..."
