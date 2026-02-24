@@ -8,21 +8,21 @@ const slides = [
         title: 'Domain AI Agent Applications',
         subtitle: 'Pre-train Models for Precision',
         description: 'We build custom AI agents that understand your industry and maintain precision through expert pre-training.',
-        buttonText: 'Meet Your AI →',
+        buttonText: 'Meet Your AI',
         buttonHref: '/contact'
     },
     {
         title: 'Cybersecurity Mastery',
         subtitle: 'Secure Infrastructure Management',
         description: 'Elite digital defense paired with managed high-performance environments for total reliability.',
-        buttonText: 'Secure Your Future →',
+        buttonText: 'Secure Your Future',
         buttonHref: '/contact'
     },
     {
         title: 'Pioneering AI Research',
         subtitle: 'Elite IT Training & Consultation',
         description: 'Turning next-gen research into competitive advantage while empowering your team with IT mastery.',
-        buttonText: 'Consult With Us →',
+        buttonText: 'Consult With Us',
         buttonHref: '/contact'
     }
 ];
