@@ -14,17 +14,12 @@ cd $APP_DIR || { echo "❌ Directory $APP_DIR not found"; exit 1; }
 # git pull origin main
 
 # Install dependencies
-echo "🧹 Performing aggressive cleanup..."
-rm -rf node_modules package-lock.json .next
-
-echo "📦 Installing ALL dependencies fresh..."
-export NODE_ENV=development
-npm install --production=false
+echo "📦 Installing dependencies..."
+npm install
 
 # Build the project
 echo "🏗️ Building the project..."
-# We use --no-lint to speed up and avoid potential dev-only linting issues during production build
-npm run build || { echo "❌ Build failed. Please check the errors above."; exit 1; }
+npm run build || { echo "❌ Build failed. Check if next.config.ts is still present (delete it!)."; exit 1; }
 
 # Standalone assets (CRITICAL for static/routing issues)
 echo "📂 Moving standalone assets..."
@@ -33,7 +28,8 @@ cp -r .next/static .next/standalone/.next/
 
 # Restart with PM2
 echo "🔄 Restarting PM2 process..."
-pm2 reload ecosystem.config.js || pm2 start ecosystem.config.js
+# We explicitly set the port here as well just in case
+PORT=3001 pm2 reload ecosystem.config.js || PORT=3001 pm2 start ecosystem.config.js
 
 # Save PM2 state
 pm2 save
