@@ -14,7 +14,10 @@ cd $APP_DIR || { echo "❌ Directory $APP_DIR not found"; exit 1; }
 # git pull origin main
 
 # Install dependencies
-echo "📦 Installing dependencies (Full install)..."
+echo "🧹 Performing aggressive cleanup..."
+rm -rf node_modules package-lock.json .next
+
+echo "📦 Installing ALL dependencies fresh..."
 export NODE_ENV=development
 npm install --production=false
 
