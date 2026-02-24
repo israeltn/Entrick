@@ -1,0 +1,166 @@
+'use client';
+
+import React from 'react';
+
+const services = [
+    { title: 'Data Sources', description: 'Advanced AI research and proprietary data synthesis.', dist: 42, curve: 0.4 },
+    { title: 'Fast Capture', description: 'High-speed SLM inference and real-time acquisition.', dist: 40, curve: -0.3 },
+    { title: 'Custom Pipelines', description: 'Orchestrating complex AI workflows and software.', dist: 44, curve: 0.5 },
+    { title: 'Team Control', description: 'Unified management layers for secure governance.', dist: 41, curve: -0.4 },
+    { title: 'Real-Time Analytics', description: 'Instant insights and agentic monitoring.', dist: 43, curve: 0.3 },
+    { title: 'Instant Alerts', description: 'Automated threat detection and notifications.', dist: 39, curve: -0.5 },
+    { title: 'Auto-Scaling', description: 'Dynamic resource allocation for private AI.', dist: 45, curve: 0.4 },
+    { title: 'Seamless Connections', description: 'Integrating private SLMs into enterprise ecosystems.', dist: 41, curve: -0.3 }
+];
+
+const ConnectionLines = () => {
+    return (
+        <div className="absolute inset-0 pointer-events-none hidden md:block select-none overflow-visible">
+            <svg className="w-full h-full overflow-visible" viewBox="0 0 100 100">
+                <defs>
+                    <radialGradient id="node-gradient">
+                        <stop offset="0%" stopColor="#DC2626" stopOpacity="1" />
+                        <stop offset="100%" stopColor="#DC2626" stopOpacity="0.2" />
+                    </radialGradient>
+                </defs>
+
+                {services.map((service, i) => {
+                    const angle = (i * 360 / services.length) - 90; // Start from top
+                    const radians = (angle * Math.PI) / 180;
+                    const r = service.dist;
+                    const endX = 50 + r * Math.cos(radians);
+                    const endY = 50 + r * Math.sin(radians);
+
+                    // Pronounced control point for deeper curves
+                    const cpAngle = radians + service.curve;
+                    const cpR = r * 0.6;
+                    const cpX = 50 + cpR * Math.cos(cpAngle);
+                    const cpY = 50 + cpR * Math.sin(cpAngle);
+                    const path = `M 50 50 Q ${cpX} ${cpY}, ${endX} ${endY}`;
+
+                    return (
+                        <g key={`branch-${i}`} className="group/branch">
+                            <path
+                                d={path}
+                                fill="none"
+                                stroke="#DC2626"
+                                strokeWidth="0.5"
+                                className="opacity-15 group-hover/section:opacity-50 transition-opacity duration-700"
+                                strokeDasharray="1 2"
+                            />
+                            {/* Animated tiny signal pulse */}
+                            <circle r="0.6" fill="#DC2626" className="animate-[pulse-flow_4s_linear_infinite]" style={{ animationDelay: `${i * 0.5}s` }}>
+                                <animateMotion dur="4s" repeatCount="indefinite" path={path} />
+                            </circle>
+                        </g>
+                    );
+                })}
+            </svg>
+        </div>
+    );
+};
+
+const ServiceNode = ({ service, index, total }: { service: any; index: number; total: number }) => {
+    const angle = (index * 360 / total) - 90;
+
+    // Position logic for radial
+    const radians = (angle * Math.PI) / 180;
+    const r = service.dist;
+    const x = 50 + r * Math.cos(radians);
+    const y = 50 + r * Math.sin(radians);
+
+    return (
+        <div
+            className="absolute hidden md:flex items-center justify-center transition-all duration-500 hover:scale-105 group/node z-30"
+            style={{
+                left: `${x}%`,
+                top: `${y}%`,
+                transform: `translate(-50%, -50%)`,
+            }}
+        >
+            <div className={`py-1.5 px-3 rounded-full bg-slate-50 border border-slate-200 group-hover/node:bg-slate-100 group-hover/node:border-primary/40 transition-all duration-300 shadow-sm hover:shadow-md`}>
+                <h3 className="text-[7px] lg:text-[10px] font-black text-black tracking-[0.1em] uppercase whitespace-nowrap text-center">
+                    {service.title}
+                </h3>
+            </div>
+
+            {/* Tooltip Description on Hover */}
+            <div className={`absolute top-full mt-2 w-48 opacity-0 pointer-events-none group-hover/node:opacity-100 transition-opacity duration-300 left-1/2 -translate-x-1/2 z-50`}>
+                <div className="bg-slate-900 border border-slate-800 p-3 rounded-lg text-center shadow-xl">
+                    <p className="text-[10px] lg:text-xs text-white leading-relaxed font-medium">
+                        {service.description}
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+
+const ServicesOverview = () => {
+    return (
+        <section className="py-20 md:py-32 bg-white relative overflow-hidden group/section min-h-[500px] md:min-h-[750px] mx-[28px]">
+            <div className="absolute inset-0 bg-slate-50/50 -z-20" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(220,38,38,0.04)_0%,transparent_60%)] -z-10" />
+
+            <div className="max-w-7xl mx-auto px-4 h-full relative z-10">
+                <div className="text-center mb-16 md:mb-24">
+                    <p className="text-primary font-bold uppercase tracking-[0.2em] text-md mb-4">
+                        Core Capabilities
+                    </p>
+                    <h2 className="text-xl md:text-3xl font-black text-black tracking-tight ">
+                        The Intelligence <span className="text-primary not-italic">Engine</span>
+                    </h2>
+                </div>
+
+                {/* Mobile View (Simple List) */}
+                <div className="md:hidden space-y-4 mb-20">
+                    {services.map((service, idx) => (
+                        <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <h3 className="text-primary font-bold text-xs tracking-widest uppercase mb-1">{service.title}</h3>
+                            <p className="text-black/70 text-[10px] leading-tight">{service.description}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Desktop Radial View (Square Container to prevent stretching) */}
+                <div className="hidden md:block relative mx-auto aspect-square h-[450px] lg:h-[600px]">
+                    <ConnectionLines />
+
+                    {services.map((service, idx) => (
+                        <ServiceNode key={idx} service={service} index={idx} total={services.length} />
+                    ))}
+
+                    {/* Center Node (Core) */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
+                        <div className="w-24 h-24 lg:w-32 lg:h-32 relative group">
+                            <div className="relative w-full h-full bg-white border border-primary/20 rounded-2xl lg:rounded-3xl flex flex-col items-center justify-center text-primary group-hover:border-primary/40 transition-all duration-700 overflow-hidden shadow-xl">
+                                <svg className="w-12 h-12 lg:w-16 lg:h-16 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.8} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                </svg>
+                                <div className="text-[10px] lg:text-[13px] font-black tracking-[0.2em] uppercase opacity-80">Entrick</div>
+                                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/5 to-transparent -translate-y-full animate-[scan_5s_linear_infinite]" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style jsx>{`
+                @keyframes scan {
+                    0% { transform: translateY(-100%); }
+                    100% { transform: translateY(100%); }
+                }
+                @keyframes pulse-flow {
+                    0% { opacity: 0; transform: scale(0.5); }
+                    20% { opacity: 1; transform: scale(1); }
+                    80% { opacity: 1; transform: scale(1); }
+                    100% { opacity: 0; transform: scale(0.5); }
+                }
+            `}</style>
+        </section>
+    );
+};
+
+
+export default ServicesOverview;
