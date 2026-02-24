@@ -3,6 +3,7 @@ import Terminal from '@/components/ui/Terminal';
 import EntrickStudio from '@/components/sections/EntrickStudio';
 import ServicesOverview from '@/components/sections/ServicesOverview';
 import HeroBackground from '@/components/ui/HeroBackground';
+import HeroSlider from '@/components/sections/HeroSlider';
 
 const stats = [
   { value: '50', suffix: '+', label: 'Projects Delivered' },
@@ -29,33 +30,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden pt-20">
         <HeroBackground />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center text-center">
-            <h1 className="text-4xl w-[300px] md:w-[600px] lg:w-[700px] xl:w-[1000px] md:text-6xl lg:text-6xl xl:text-6xl font-bold tracking-tight mb-8 animate-fade-in">
-              Private Super Intelligence<br />
-              <span className="text-primary-gradient text-5xl">For Domain-Specific AI.</span>
-            </h1>
-
-            <p className="text-muted text-lg md:text-xl max-w-xl mb-12 animate-fade-in opacity-80 leading-relaxed">
-              Build, fine-tune, and deploy performant AI
-              We provide domain-specific AI for your business.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 animate-fade-in">
-              <Button href="/contact" variant="primary" size="lg" className="min-w-[180px]">
-                Talk to us →
-              </Button>
-              {/* <Button href="/agents" variant="secondary" size="lg" className="min-w-[180px] group">
-                <svg className="w-5 h-5 mr-2 text-primary group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Experience Talent
-              </Button> */}
-            </div>
-          </div>
-        </div>
+        <HeroSlider />
       </section>
 
 
@@ -80,10 +55,10 @@ export default function HomePage() {
               </p>
               <div className="space-y-4">
                 {[
-                  { title: 'Rapid Deployment', desc: 'Deploy complex AI agents and workflows in minutes, not weeks.' },
-                  { title: 'Custom Intelligence', desc: 'Tailor AI behavior to your specific business logic and industry requirements.' },
-                  { title: 'Security First', desc: 'Enterprise-grade protection integrated at every layer of your digital transformation.' },
-                  { title: 'Strategic Research', desc: 'Pioneering next-gen AI architectures to give your organization a sustainable edge.' }
+                  { title: 'AI Court Transcriber', desc: 'Secure, high-precision legal transcription powered by domain-specific SLMs.' },
+                  { title: 'Security Compliance AI', desc: 'Automated governance and proactive audit-ready compliance for enterprises.' },
+                  { title: 'Health Intelligence AI', desc: 'Advanced medical data synthesis and intelligent Lab result analysis and reporting.' },
+                  { title: 'Sovereign SLM', desc: 'Private, high-performance Small Language Models providing total data sovereignty.' }
                 ].map((item, index) => (
                   <div key={index} className="group flex gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-300">
                     <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-500">

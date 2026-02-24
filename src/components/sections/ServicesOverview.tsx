@@ -3,14 +3,13 @@
 import React from 'react';
 
 const services = [
-    { title: 'Data Sources', description: 'Advanced AI research and proprietary data synthesis.', dist: 42, curve: 0.4 },
-    { title: 'Fast Capture', description: 'High-speed SLM inference and real-time acquisition.', dist: 40, curve: -0.3 },
-    { title: 'Custom Pipelines', description: 'Orchestrating complex AI workflows and software.', dist: 44, curve: 0.5 },
-    { title: 'Team Control', description: 'Unified management layers for secure governance.', dist: 41, curve: -0.4 },
-    { title: 'Real-Time Analytics', description: 'Instant insights and agentic monitoring.', dist: 43, curve: 0.3 },
-    { title: 'Instant Alerts', description: 'Automated threat detection and notifications.', dist: 39, curve: -0.5 },
-    { title: 'Auto-Scaling', description: 'Dynamic resource allocation for private AI.', dist: 45, curve: 0.4 },
-    { title: 'Seamless Connections', description: 'Integrating private SLMs into enterprise ecosystems.', dist: 41, curve: -0.3 }
+    { title: 'Domain AI Agents', description: 'Building bespoke AI agents tailored to your unique business domain and logic.', dist: 42, curve: 0.4 },
+    { title: 'Pre-train Models', description: 'Expert fine-tuning and pre-training of models for industry-specific precision.', dist: 40, curve: -0.3 },
+    { title: 'AI Research', description: 'Pioneering next-gen AI architectures to keep your organization ahead of the curve.', dist: 44, curve: 0.5 },
+    { title: 'Cybersecurity', description: 'Enterprise-grade digital defense and proactive threat mitigation strategies.', dist: 41, curve: -0.4 },
+    { title: 'Custom Software', description: 'Bespoke software development optimized for performance, security, and scale.', dist: 43, curve: 0.3 },
+    { title: 'Infrastructures', description: 'Managed high-performance environments built for reliability and global scale.', dist: 39, curve: -0.5 },
+    { title: 'IT Training', description: 'Empowering your workforce through expert-led technology and AI mastery programs.', dist: 45, curve: 0.4 }
 ];
 
 const ConnectionLines = () => {
