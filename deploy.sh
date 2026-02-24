@@ -20,6 +20,11 @@ npm install --production
 echo "🏗️ Building the project..."
 npm run build
 
+# Standalone assets (CRITICAL for static/routing issues)
+echo "📂 Moving standalone assets..."
+cp -r public .next/standalone/
+cp -r .next/static .next/standalone/.next/
+
 # Restart with PM2
 echo "🔄 Restarting PM2 process..."
 pm2 reload ecosystem.config.js || pm2 start ecosystem.config.js
