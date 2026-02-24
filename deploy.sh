@@ -14,12 +14,14 @@ cd $APP_DIR || { echo "❌ Directory $APP_DIR not found"; exit 1; }
 # git pull origin main
 
 # Install dependencies
-echo "📦 Installing dependencies..."
-npm install
+echo "📦 Installing dependencies (including dev)..."
+# Force NODE_ENV to development to ensure devDeps (TS, etc) are installed
+export NODE_ENV=development
+npm install --include=dev
 
 # Build the project
 echo "🏗️ Building the project..."
-npm run build
+npm run build || { echo "❌ Build failed. Stopping deployment."; exit 1; }
 
 # Standalone assets (CRITICAL for static/routing issues)
 echo "📂 Moving standalone assets..."
