@@ -42,3 +42,9 @@ echo "---------------------------------------------------"
 echo "✅ Deployment successful! Site is on Port 3001"
 echo "📡 Check logs with: pm2 logs $APP_NAME"
 echo "---------------------------------------------------"
+
+
+# 1. Reset any local changes
+# git reset --hard origin/main
+# 2. Pull just to be sure
+# git pull origin main

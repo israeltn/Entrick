@@ -59,7 +59,7 @@ const HeroSlider = () => {
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
             <div className="flex flex-col items-center text-center min-h-[400px] justify-center">
                 <div className={`transition-all duration-500 transform ${isExiting ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'}`}>
-                    <h1 className="text-4xl w-[300px] md:w-[600px] lg:w-[700px] xl:w-[1000px] md:text-6xl lg:text-6xl xl:text-6xl font-bold tracking-tight mb-8">
+                    <h1 className="text-4xl w-full max-w-[300px] md:max-w-none md:w-[600px] lg:w-[700px] xl:w-[1000px] md:text-6xl lg:text-6xl xl:text-6xl font-bold tracking-tight mb-8 mx-auto">
                         {slides[currentSlide].title}<br />
                         <span className="text-primary-gradient text-5xl">{slides[currentSlide].subtitle}</span>
                     </h1>

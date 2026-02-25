@@ -50,12 +50,12 @@ export default function Footer() {
     return (
         <footer className="bg-black border-t border-border text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 lg:gap-16">
                     {/* Brand */}
-                    <div className="md:col-span-1">
+                    <div className="col-span-2 lg:col-span-1">
                         <Link href="/" className="flex items-center gap-2 mb-8">
                             <div className="w-10 h-10 bg-primary rounded shadow-[0_0_15px_rgba(255,0,0,0.5)] flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">O</span>
+                                <span className="text-white font-bold text-xl">E</span>
                             </div>
                             <span className="text-2xl font-bold tracking-tighter">Entrick</span>
                         </Link>
@@ -79,7 +79,7 @@ export default function Footer() {
                     </div>
 
                     {/* Quick Links */}
-                    <div>
+                    <div className="col-span-1">
                         <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-white">Quick links</h4>
                         <ul className="space-y-4">
                             {quickLinks.map((link) => (
@@ -96,7 +96,7 @@ export default function Footer() {
                     </div>
 
                     {/* Services */}
-                    <div>
+                    <div className="col-span-1">
                         <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-white">Services</h4>
                         <ul className="space-y-4">
                             {services.map((service) => (
@@ -113,7 +113,7 @@ export default function Footer() {
                     </div>
 
                     {/* Newsletter */}
-                    <div>
+                    <div className="col-span-2 lg:col-span-1">
                         <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-white">Newsletter</h4>
                         <p className="text-muted text-sm mb-6">
                             Stay updated with the latest in AI and technology trends.
