@@ -1,9 +1,21 @@
+import type { Metadata } from 'next';
 import Button from '@/components/ui/Button';
 import Terminal from '@/components/ui/Terminal';
 import EntrickStudio from '@/components/sections/EntrickStudio';
 import ServicesOverview from '@/components/sections/ServicesOverview';
 import HeroBackground from '@/components/ui/HeroBackground';
 import HeroSlider from '@/components/sections/HeroSlider';
+
+export const metadata: Metadata = {
+  title: "Home | Entrick Technologies",
+  description: "Entrick Technologies delivers intelligent IT solutions, specializing in Agentic AI, custom software, and cybersecurity to transform your organization.",
+  openGraph: {
+    title: "Entrick Technologies | Intelligent IT Solutions",
+    description: "Empowering tomorrow with intelligent IT solutions. Modern software development, cybersecurity, AI automation, and cutting-edge Agentic AI collaboration.",
+    url: "https://entrick.com",
+    images: ["/og-image.jpg"],
+  },
+};
 
 const stats = [
   { value: '50', suffix: '+', label: 'Projects Delivered' },

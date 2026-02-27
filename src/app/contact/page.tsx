@@ -4,6 +4,14 @@ import CTASection from '@/components/sections/CTASection';
 export const metadata: Metadata = {
     title: 'Contact Us',
     description: 'Get in touch with Entrick Technologies. Ready to transform your organization with intelligent solutions? We are here to help.',
+    alternates: {
+        canonical: '/contact',
+    },
+    openGraph: {
+        title: 'Contact | Entrick Technologies',
+        description: 'Get in touch with Entrick Technologies for intelligent IT solutions.',
+        url: 'https://entrick.com/contact',
+    },
 };
 
 export default function ContactPage() {
@@ -70,7 +78,7 @@ export default function ContactPage() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                                         </svg>
                                     </div>
-                                    <span className="text-gray-600">info@entrick.com</span>
+                                    <span className="text-gray-600">info@entricksystems.com</span>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 bg-[#DC2626]/10 rounded-lg flex items-center justify-center">

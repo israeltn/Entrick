@@ -7,10 +7,10 @@ import Button from '../ui/Button';
 
 const navigation = [
     { name: '', href: '/' },
-    // { name: 'About Entrick', href: '/about' },
+    // { name: 'About', href: '/about' },
     // { name: 'Services', href: '/services' },
     // { name: 'Agents', href: '/agents' },
-    // { name: 'Contact us', href: '/contact' },
+    // { name: 'Contact', href: '/contact' },
 ];
 
 export default function Header() {

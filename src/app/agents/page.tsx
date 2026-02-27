@@ -5,6 +5,14 @@ import StatsSection from '@/components/sections/StatsSection';
 export const metadata: Metadata = {
     title: 'Private AI Agents',
     description: 'Build, fine-tune, and deploy performant SLMs and AI agents in private environments for SMEs and Enterprises.',
+    alternates: {
+        canonical: '/agents',
+    },
+    openGraph: {
+        title: 'AI Agents | Entrick Technologies',
+        description: 'Build, fine-tune, and deploy performant SLMs and AI agents in private environments.',
+        url: 'https://entrick.com/agents',
+    },
 };
 
 const useCases = [
