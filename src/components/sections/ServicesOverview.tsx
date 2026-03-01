@@ -98,22 +98,22 @@ const ServiceNode = ({ service, index, total }: { service: any; index: number; t
 
 const ServicesOverview = () => {
     return (
-        <section className="py-20 md:py-32 bg-white relative overflow-hidden group/section min-h-[500px] md:min-h-[750px] mx-[28px]">
+        <section className="py-16 md:py-32 bg-white relative overflow-hidden group/section min-h-[500px] md:min-h-[750px]">
             <div className="absolute inset-0 bg-slate-50/50 -z-20" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(220,38,38,0.04)_0%,transparent_60%)] -z-10" />
 
-            <div className="max-w-7xl mx-auto px-4 h-full relative z-10">
-                <div className="text-center mb-16 md:mb-24">
-                    <p className="text-primary font-bold uppercase tracking-[0.2em] text-md mb-4">
+            <div className="max-w-7xl mx-auto px-4 h-full relative z-10 overflow-visible">
+                <div className="text-center mb-12 md:mb-24">
+                    <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm md:text-md mb-4">
                         Core Capabilities
                     </p>
-                    <h2 className="text-xl md:text-3xl font-black text-black tracking-tight ">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-black tracking-tight ">
                         The Intelligence <span className="text-primary not-italic">Engine</span>
                     </h2>
                 </div>
 
                 {/* Radial View */}
-                <div className="relative mx-auto aspect-square h-[400px] xs:h-[450px] sm:h-[500px] md:h-[450px] lg:h-[600px]">
+                <div className="relative mx-auto aspect-square w-full max-w-[320px] xs:max-w-[380px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[600px] mt-8 hover:z-50">
                     <ConnectionLines />
 
                     {services.map((service, idx) => (
