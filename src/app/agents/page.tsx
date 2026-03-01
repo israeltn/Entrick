@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: '/agents',
     },
     openGraph: {
-        title: 'AI Agents | Entrick Technologies',
+        title: 'AI Agents | Entrick Information Systems',
         description: 'Build, fine-tune, and deploy performant SLMs and AI agents in private environments.',
         url: 'https://entrick.com/agents',
     },

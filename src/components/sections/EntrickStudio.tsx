@@ -115,7 +115,7 @@ const EntrickStudio = () => {
                                                 }`}
                                         >
                                             <div className={`w-2 h-2 rounded-full ${useCase.color}`} />
-                                            <span className="text-xs font-medium text-gray-600">{useCase.file}</span>
+                                            <span className="text-xs font-semibold text-gray-700">{useCase.file}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -154,16 +154,16 @@ const EntrickStudio = () => {
                                                 <h4 key={activeCase.model} className="text-sm font-bold text-gray-900 transition-all duration-500 animate-in fade-in slide-in-from-left-2">
                                                     {activeCase.model}
                                                 </h4>
-                                                <span className="text-[10px] text-gray-400 uppercase tracking-wider">Fine-tuned from Mistral 7B</span>
+                                                <span className="text-[10px] text-gray-600 uppercase tracking-wider font-semibold">Fine-tuned from Mistral 7B</span>
                                             </div>
                                         </div>
-                                        <span className="text-[10px] bg-gray-100 px-2 py-1 rounded-full text-gray-500 font-bold">V 1.0</span>
+                                        <span className="text-[10px] bg-gray-100 px-2 py-1 rounded-full text-gray-700 font-bold">V 1.0</span>
                                     </div>
 
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center gap-1.5">
                                             <div className="w-4 h-4 rounded-full border-2 border-primary/20 border-t-primary animate-spin" />
-                                            <span key={activeCase.file} className="text-xs text-gray-500 font-medium animate-in fade-in">Fine-tuning {activeCase.file}...</span>
+                                            <span key={activeCase.file} className="text-xs text-gray-600 font-semibold animate-in fade-in">Fine-tuning {activeCase.file}...</span>
                                         </div>
                                     </div>
                                 </div>

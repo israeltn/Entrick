@@ -8,7 +8,7 @@ export const metadata: Metadata = {
         canonical: '/services',
     },
     openGraph: {
-        title: 'Services | Entrick Technologies',
+        title: 'Services | Entrick Information Systems',
         description: 'Explore our comprehensive IT solutions including custom software, AI, and cybersecurity.',
         url: 'https://entrick.com/services',
     },

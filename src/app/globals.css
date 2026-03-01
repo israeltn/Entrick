@@ -3,14 +3,16 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --primary: #E60000; /* Slightly deeper, more premium red */
+  --primary: #F22020;
+  /* Lighter red for WCAG AA compliance on black */
   --primary-hover: #CC0000;
   --surface: #050505;
   --surface-hover: #0A0A0A;
   --border: #1A1A1A;
   --border-strong: #2A2A2A;
-  --muted: #666666;
-  --card-glow: rgba(230, 0, 0, 0.03);
+  --muted: #9CA3AF;
+  /* gray-400 for WCAG AA compliance on black */
+  --card-glow: rgba(242, 32, 32, 0.05);
 }
 
 @theme inline {
@@ -57,13 +59,27 @@ html {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.1); }
-  50% { box-shadow: 0 0 40px rgba(255, 0, 0, 0.2); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.2);
+  }
 }
 
 .animate-fade-in {
@@ -102,7 +118,7 @@ html {
 
 /* Grid background pattern */
 .grid-bg {
-  background-image: 
+  background-image:
     linear-gradient(to right, #111 1px, transparent 1px),
     linear-gradient(to bottom, #111 1px, transparent 1px);
   background-size: 40px 40px;
@@ -111,4 +127,3 @@ html {
 .glow-hover:hover {
   animation: glow 2s infinite ease-in-out;
 }
-

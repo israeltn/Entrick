@@ -6,6 +6,7 @@ const quickLinks = [
     { name: 'Services', href: '/services' },
     { name: 'AI Agents', href: '/agents' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Sitemap', href: '/sitemap.xml' },
 ];
 
 const services = [
@@ -126,7 +127,10 @@ export default function Footer() {
                                     placeholder="your@email.com"
                                     className="w-full px-4 py-3 bg-surface border border-border rounded-md text-sm text-white focus:outline-none focus:border-primary transition-colors pr-12"
                                 />
-                                <button className="absolute right-2 top-1.5 p-1.5 text-primary hover:text-white transition-colors">
+                                <button
+                                    className="absolute right-2 top-1.5 p-1.5 text-primary hover:text-white transition-colors"
+                                    aria-label="Subscribe to newsletter"
+                                >
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
@@ -139,7 +143,8 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="mt-20 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-muted text-xs">
-                        © {new Date().getFullYear()} Entrick Technologies. All rights reserved.
+                        © {new Date().getFullYear()} Entrick Information Systems. All rights reserved. <br />
+                        COMPANY REGISTRATION NO. 9176102
                     </p>
                     <div className="flex gap-8">
                         <Link href="/privacy" className="text-muted text-xs hover:text-white transition-colors">

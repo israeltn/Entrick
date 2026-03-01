@@ -7,11 +7,11 @@ import HeroBackground from '@/components/ui/HeroBackground';
 import HeroSlider from '@/components/sections/HeroSlider';
 
 export const metadata: Metadata = {
-  title: "Home | Entrick Technologies",
-  description: "Entrick Technologies is a modern software company delivering Secure AI, Research, LLM/SLM fine-tuning for domain-specific privacy environments, data curation for model training, Cybersecurity, and Sovereign AI.",
+  title: "Home | Entrick Information Systems",
+  description: "Entrick Information Systems is a modern software company delivering Secure AI, Research, LLM/SLM fine-tuning for domain-specific privacy environments, data curation for model training, Cybersecurity, and Sovereign AI.",
   openGraph: {
-    title: "Entrick Technologies | Secure AI & Modern Software Company",
-    description: "Entrick Technologies is a modern software company delivering Secure AI, Research, LLM/SLM fine-tuning for domain-specific privacy environments, data curation for model training, Cybersecurity, and Sovereign AI.",
+    title: "Entrick Information Systems | Secure AI & Modern Software Company",
+    description: "Entrick Information Systems is a modern software company delivering Secure AI, Research, LLM/SLM fine-tuning for domain-specific privacy environments, data curation for model training, Cybersecurity, and Sovereign AI.",
     url: "https://entricksystems.com",
     images: ["/og-image.jpg"],
   },

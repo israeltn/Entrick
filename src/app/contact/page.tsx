@@ -3,13 +3,13 @@ import CTASection from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
     title: 'Contact Us',
-    description: 'Get in touch with Entrick Technologies. Ready to transform your organization with intelligent solutions? We are here to help.',
+    description: 'Get in touch with Entrick Information Systems. Ready to transform your organization with intelligent solutions? We are here to help.',
     alternates: {
         canonical: '/contact',
     },
     openGraph: {
-        title: 'Contact | Entrick Technologies',
-        description: 'Get in touch with Entrick Technologies for intelligent IT solutions.',
+        title: 'Contact | Entrick Information Systems',
+        description: 'Get in touch with Entrick Information Systems for intelligent IT solutions.',
         url: 'https://entrick.com/contact',
     },
 };

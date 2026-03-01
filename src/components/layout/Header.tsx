@@ -45,8 +45,9 @@ export default function Header() {
                     <div className="hidden md:flex items-center gap-10">
                         {navigation.map((item) => (
                             <Link
-                                key={item.name}
+                                key={item.name || item.href}
                                 href={item.href}
+                                aria-label={item.name || 'Home'}
                                 className={`text-sm font-medium transition-all duration-200 hover:text-primary ${pathname === item.href
                                     ? 'text-white'
                                     : 'text-muted'
@@ -95,8 +96,9 @@ export default function Header() {
                     <div className="flex flex-col gap-6 pt-10">
                         {navigation.map((item) => (
                             <Link
-                                key={item.name}
+                                key={item.name || item.href}
                                 href={item.href}
+                                aria-label={item.name || 'Home'}
                                 onClick={() => setIsOpen(false)}
                                 className={`text-xl font-medium transition-colors ${pathname === item.href
                                     ? 'text-primary'
