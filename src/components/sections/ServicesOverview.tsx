@@ -14,7 +14,7 @@ const services = [
 
 const ConnectionLines = () => {
     return (
-        <div className="absolute inset-0 pointer-events-none hidden md:block select-none overflow-visible">
+        <div className="absolute inset-0 pointer-events-none select-none overflow-visible">
             <svg className="w-full h-full overflow-visible" viewBox="0 0 100 100">
                 <defs>
                     <radialGradient id="node-gradient">
@@ -70,7 +70,7 @@ const ServiceNode = ({ service, index, total }: { service: any; index: number; t
 
     return (
         <div
-            className="absolute hidden md:flex items-center justify-center transition-all duration-500 hover:scale-105 group/node z-30"
+            className="absolute flex items-center justify-center transition-all duration-500 hover:scale-105 group/node z-30"
             style={{
                 left: `${x}%`,
                 top: `${y}%`,
@@ -78,15 +78,15 @@ const ServiceNode = ({ service, index, total }: { service: any; index: number; t
             }}
         >
             <div className={`py-1.5 px-3 rounded-full bg-slate-50 border border-slate-200 group-hover/node:bg-slate-100 group-hover/node:border-primary/40 transition-all duration-300 shadow-sm hover:shadow-md`}>
-                <h3 className="text-[7px] lg:text-[10px] font-black text-black tracking-[0.1em] uppercase whitespace-nowrap text-center">
+                <h3 className="text-[8px] xs:text-[9px] lg:text-[10px] font-black text-black tracking-[0.1em] uppercase whitespace-nowrap text-center">
                     {service.title}
                 </h3>
             </div>
 
             {/* Tooltip Description on Hover */}
-            <div className={`absolute top-full mt-2 w-48 opacity-0 pointer-events-none group-hover/node:opacity-100 transition-opacity duration-300 left-1/2 -translate-x-1/2 z-50`}>
-                <div className="bg-slate-900 border border-slate-800 p-3 rounded-lg text-center shadow-xl">
-                    <p className="text-[10px] lg:text-xs text-white leading-relaxed font-medium">
+            <div className={`absolute top-full mt-2 w-40 sm:w-48 opacity-0 pointer-events-none group-hover/node:opacity-100 transition-opacity duration-300 left-1/2 -translate-x-1/2 z-50`}>
+                <div className="bg-slate-900 border border-slate-800 p-2.5 sm:p-3 rounded-lg text-center shadow-xl">
+                    <p className="text-[11px] sm:text-xs text-white leading-relaxed font-medium">
                         {service.description}
                     </p>
                 </div>
@@ -112,18 +112,8 @@ const ServicesOverview = () => {
                     </h2>
                 </div>
 
-                {/* Mobile View (Simple List) */}
-                <div className="md:hidden space-y-4 mb-20">
-                    {services.map((service, idx) => (
-                        <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                            <h3 className="text-primary font-bold text-xs tracking-widest uppercase mb-1">{service.title}</h3>
-                            <p className="text-black/70 text-[10px] leading-tight">{service.description}</p>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Desktop Radial View (Square Container to prevent stretching) */}
-                <div className="hidden md:block relative mx-auto aspect-square h-[450px] lg:h-[600px]">
+                {/* Radial View */}
+                <div className="relative mx-auto aspect-square h-[400px] xs:h-[450px] sm:h-[500px] md:h-[450px] lg:h-[600px]">
                     <ConnectionLines />
 
                     {services.map((service, idx) => (
@@ -132,12 +122,12 @@ const ServicesOverview = () => {
 
                     {/* Center Node (Core) */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
-                        <div className="w-24 h-24 lg:w-32 lg:h-32 relative group">
-                            <div className="relative w-full h-full bg-white border border-primary/20 rounded-2xl lg:rounded-3xl flex flex-col items-center justify-center text-primary group-hover:border-primary/40 transition-all duration-700 overflow-hidden shadow-xl">
-                                <svg className="w-12 h-12 lg:w-16 lg:h-16 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 relative group">
+                            <div className="relative w-full h-full bg-white border border-primary/20 rounded-xl sm:rounded-2xl lg:rounded-3xl flex flex-col items-center justify-center text-primary group-hover:border-primary/40 transition-all duration-700 overflow-hidden shadow-xl">
+                                <svg className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.8} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                                 </svg>
-                                <div className="text-[10px] lg:text-[13px] font-black tracking-[0.2em] uppercase opacity-80">Entrick</div>
+                                <div className="text-[9px] sm:text-[11px] lg:text-[13px] font-black tracking-[0.2em] uppercase opacity-80">Entrick</div>
                                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-primary/5 to-transparent -translate-y-full animate-[scan_5s_linear_infinite]" />
                             </div>
                         </div>

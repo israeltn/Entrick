@@ -68,8 +68,8 @@ const HeroSlider = () => {
                         {slides[currentSlide].description}
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                        <Button href={slides[currentSlide].buttonHref} variant="primary" size="lg" className="min-w-[180px]">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-[250px] max-w-md mx-auto">
+                        <Button href={slides[currentSlide].buttonHref} variant="primary" size="md" className="w-full sm:w-auto md:min-w-[180px] text-base sm:text-xs">
                             {slides[currentSlide].buttonText}
                         </Button>
                     </div>
