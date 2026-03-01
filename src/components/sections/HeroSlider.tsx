@@ -5,26 +5,41 @@ import Button from '@/components/ui/Button';
 
 const slides = [
     {
-        title: 'Domain AI Agent Applications',
-        subtitle: 'Pre-train Models for Precision',
-        description: 'We build custom AI agents that understand your industry and maintain precision through expert pre-training.',
-        buttonText: 'Meet Your AI',
-        buttonHref: '/contact'
-    },
-    {
-        title: 'Cybersecurity Mastery',
-        subtitle: 'Secure Infrastructure Management',
-        description: 'Elite digital defense paired with managed high-performance environments for total reliability.',
-        buttonText: 'Secure Your Future',
-        buttonHref: '/contact'
-    },
-    {
         title: 'Pioneering AI Research',
-        subtitle: 'Elite IT Training & Consultation',
-        description: 'Turning next-gen research into competitive advantage while empowering your team with IT mastery.',
-        buttonText: 'Consult With Us',
+        subtitle: 'Innovation at the Forefront',
+        description: 'Dedicated to advanced AI research, we continuously explore new frontiers to bring cutting-edge intelligent solutions into practical, real-world applications.',
+        buttonText: 'Discover Our Research',
         buttonHref: '/contact'
-    }
+    },
+    {
+        title: 'Sovereign AI & Cybersecurity',
+        subtitle: 'Resource-Constrained Environments',
+        description: 'Robust cybersecurity and Sovereign AI solutions optimized for efficient local deployment, keeping your critical infrastructure impenetrable.',
+        buttonText: 'Secure Your Infrastructure',
+        buttonHref: '/contact'
+    },
+    {
+        title: 'Secure AI & Modern Software',
+        subtitle: 'Empowering Your Organization',
+        description: 'We are a modern software company pioneering Secure AI solutions, delivering state-of-the-art applications tailored to your unique operational needs.',
+        buttonText: 'Discover Secure AI',
+        buttonHref: '/contact'
+    },
+    {
+        title: 'Privacy-First AI Fine-Tuning',
+        subtitle: 'LLM & SLM Optimization',
+        description: 'Expert LLM and SLM fine-tuning designed for domain-specific privacy environments, ensuring your proprietary data remains completely secure.',
+        buttonText: 'Explore Fine-Tuning',
+        buttonHref: '/contact'
+    },
+    {
+        title: 'Curated Training Data',
+        subtitle: 'for Domain AI',
+        description: 'High-quality data curation tailored for domain-specific AI training, ensuring fully compliant and powerful model performance.',
+        buttonText: 'Explore Data Solutions',
+        buttonHref: '/contact'
+    },
+
 ];
 
 const HeroSlider = () => {
@@ -34,7 +49,7 @@ const HeroSlider = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             handleNext();
-        }, 6000);
+        }, 7000);
         return () => clearInterval(timer);
     }, [currentSlide]);
 
@@ -43,7 +58,7 @@ const HeroSlider = () => {
         setTimeout(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
             setIsExiting(false);
-        }, 500);
+        }, 700);
     };
 
     const goToSlide = (index: number) => {
@@ -52,7 +67,7 @@ const HeroSlider = () => {
         setTimeout(() => {
             setCurrentSlide(index);
             setIsExiting(false);
-        }, 500);
+        }, 600);
     };
 
     return (

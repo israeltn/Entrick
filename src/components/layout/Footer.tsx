@@ -9,11 +9,12 @@ const quickLinks = [
 ];
 
 const services = [
-    { name: 'Software Development', href: '/services#software' },
-    { name: 'UI/UX Design', href: '/services#design' },
+    { name: 'Research', href: '/services#research' },
+    { name: 'Training', href: '/services#training' },
+    { name: 'Agentic Data Curation', href: '/services#data' },
     { name: 'Cybersecurity', href: '/services#cybersecurity' },
     { name: 'AI Automation', href: '/services#ai' },
-    { name: 'AI Research', href: '/services#research' },
+
 ];
 
 const socialLinks = [

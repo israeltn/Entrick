@@ -10,13 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://entrick.com"),
+  metadataBase: new URL("https://entricksystems.com"),
   title: {
-    default: "Entrick Technologies | Intelligent IT Solutions",
+    default: "Entrick Technologies | Secure AI & Modern Software Company",
     template: "%s | Entrick Technologies",
   },
-  description: "Empowering tomorrow with intelligent IT solutions. Modern software development, cybersecurity, AI automation, and cutting-edge Agentic AI collaboration.",
-  keywords: ["IT solutions", "software development", "cybersecurity", "AI automation", "agentic AI", "digital transformation", "Sovereign SLM", "Domain AI Agents"],
+  description: "Entrick Technologies is a modern software company delivering Secure AI, Research, LLM/SLM fine-tuning for domain-specific privacy environments, data curation for model training, Cybersecurity, and Sovereign AI for resource-constrained environments.",
+  keywords: ["Secure AI", "modern Software company", "AI Research", "LLM fine-tuning", "SLM fine-tuning", "domain specific privacy", "data curation", "Model training", "Cybersecurity", "Sovereign AI", "resource constrained environments", "IT solutions", "Entrick Information Systems"],
   authors: [{ name: "Entrick Technologies" }],
   creator: "Entrick Technologies",
   publisher: "Entrick Technologies",
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://entrick.com",
+    url: "https://entricksystems.com",
     siteName: "Entrick Technologies",
-    title: "Entrick Technologies | Intelligent IT Solutions",
-    description: "Empowering tomorrow with intelligent IT solutions. Modern software development, cybersecurity, AI automation, and cutting-edge Agentic AI collaboration.",
+    title: "Entrick Technologies | Secure AI & Modern Software Company",
+    description: "Entrick Technologies delivers Secure AI, LLM/SLM fine-tuning, data curation, Cybersecurity, and Sovereign AI solutions.",
     images: [
       {
         url: "/og-image.jpg",
@@ -78,7 +78,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`} suppressHydrationWarning>
         <Header />
         <main className="pt-20">{children}</main>
         <Footer />

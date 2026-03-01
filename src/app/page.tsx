@@ -8,11 +8,11 @@ import HeroSlider from '@/components/sections/HeroSlider';
 
 export const metadata: Metadata = {
   title: "Home | Entrick Technologies",
-  description: "Entrick Technologies delivers intelligent IT solutions, specializing in Agentic AI, custom software, and cybersecurity to transform your organization.",
+  description: "Entrick Technologies is a modern software company delivering Secure AI, Research, LLM/SLM fine-tuning for domain-specific privacy environments, data curation for model training, Cybersecurity, and Sovereign AI.",
   openGraph: {
-    title: "Entrick Technologies | Intelligent IT Solutions",
-    description: "Empowering tomorrow with intelligent IT solutions. Modern software development, cybersecurity, AI automation, and cutting-edge Agentic AI collaboration.",
-    url: "https://entrick.com",
+    title: "Entrick Technologies | Secure AI & Modern Software Company",
+    description: "Entrick Technologies is a modern software company delivering Secure AI, Research, LLM/SLM fine-tuning for domain-specific privacy environments, data curation for model training, Cybersecurity, and Sovereign AI.",
+    url: "https://entricksystems.com",
     images: ["/og-image.jpg"],
   },
 };

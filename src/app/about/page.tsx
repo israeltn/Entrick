@@ -3,14 +3,14 @@ import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
     title: 'About Us',
-    description: 'Learn about Entrick Technologies - a visionary IT firm driven by a mission to transform how organizations operate through intelligent solutions.',
+    description: 'Entrick Technologies is a modern software company specializing in Secure AI, Research, LLM/SLM fine-tuning for domain-specific privacy environments, data curation for model training, Cybersecurity, and Sovereign AI.',
     alternates: {
         canonical: '/about',
     },
     openGraph: {
         title: 'About | Entrick Technologies',
-        description: 'Learn about Entrick Technologies mission to transform organizations through intelligent IT solutions.',
-        url: 'https://entrick.com/about',
+        description: 'Learn about Entrick Technologies, a modern software company focused on Secure AI, LLM/SLM fine-tuning, and Cybersecurity in privacy-focused environments.',
+        url: 'https://entricksystems.com/about',
     },
 };
 
