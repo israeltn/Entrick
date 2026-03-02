@@ -8,6 +8,7 @@ import Button from '../ui/Button';
 
 const navigation = [
     { name: '', href: '/' },
+    // { name: 'Pitch Deck', href: '/pitch' },
     // { name: 'About', href: '/about' },
     // { name: 'Services', href: '/services' },
     // { name: 'Agents', href: '/agents' },

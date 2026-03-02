@@ -6,6 +6,7 @@ const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'AI Agents', href: '/agents' },
+    { name: 'Pitch Deck', href: '/pitch' },
     { name: 'Contact', href: '/contact' },
     { name: 'Sitemap', href: '/sitemap.xml' },
 ];
