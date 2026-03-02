@@ -56,7 +56,7 @@ const values = [
 
 const team = [
     { name: 'Nguuma Tyokaha', role: 'Founder', image: '' },
-    { name: 'Omoyokan Moses Adenomor', role: 'CTO', image: '' },
+    { name: 'Omoyokan Moses Adenomor', role: 'Chief technology officer', image: '' },
     { name: 'Chisom Chima', role: 'Principal Software Engineer', image: '' },
 
 
@@ -166,7 +166,7 @@ export default function AboutPage() {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-xl md:text-2xl font-black text-black tracking-tight mb-4">Meet Our Dedicated Team</h2>
                     <p className="text-gray-500 text-base max-w-2xl mx-auto mb-20 font-medium">
-                        Our diverse team consists of AI specialists, product designers, and customer success experts, all dedicated to ensuring Entrick remains at the forefront of AI automation.
+                        Our diverse team consists of , AI security specialists, product designers, and AI/ML experts, all dedicated to ensuring Entrick remains at the forefront of AI automation.
                     </p>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16">
