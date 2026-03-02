@@ -55,9 +55,11 @@ const values = [
 ];
 
 const team = [
-    { name: 'Nguuma Tyokaha', role: 'Founder & CEO', image: '' },
-    { name: 'Chisom Chima', role: 'Senior Pro Software Engineer', image: '' },
-    { name: 'Omoyokan Moses Adenomor', role: 'AI/ML Engineer', image: '' },
+    { name: 'Nguuma Tyokaha', role: 'Founder', image: '' },
+    { name: 'Omoyokan Moses Adenomor', role: 'CTO', image: '' },
+    { name: 'Chisom Chima', role: 'Principal Software Engineer', image: '' },
+
+
     // { name: 'Albert Flores', role: 'UX Designer', image: '' },
     // { name: 'Robert Fox', role: 'DevOps Engineer', image: '' },
     // { name: 'Kathryn Murphy', role: 'Founder & CEO', image: '' },

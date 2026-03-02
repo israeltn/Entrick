@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const quickLinks = [
     { name: 'About Us', href: '/about' },
@@ -55,11 +56,14 @@ export default function Footer() {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 lg:gap-16">
                     {/* Brand */}
                     <div className="col-span-2 lg:col-span-1">
-                        <Link href="/" className="flex items-center gap-2 mb-8">
-                            <div className="w-10 h-10 bg-primary rounded shadow-[0_0_15px_rgba(255,0,0,0.5)] flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">E</span>
-                            </div>
-                            <span className="text-2xl font-bold tracking-tighter">Entrick</span>
+                        <Link href="/" className="flex items-center mb-8 transition-transform hover:scale-105 inline-block">
+                            <Image
+                                src="/image/entrick logo.png"
+                                alt="Entrick Information Systems Logo"
+                                width={160}
+                                height={40}
+                                className="object-contain"
+                            />
                         </Link>
                         <p className="text-muted text-sm leading-relaxed mb-8 max-w-xs">
                             Empowering tomorrow with Intelligent IT solutions. Modern software, secure systems, and intelligent automation.

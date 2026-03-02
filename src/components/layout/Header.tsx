@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Button from '../ui/Button';
 
@@ -34,11 +35,15 @@ export default function Header() {
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-0.5 group">
-                        <div className="w-8 h-8 bg-primary rounded shadow-[0_0_15px_rgba(255,0,0,0.5)] flex items-center justify-center transition-transform group-hover:scale-110">
-                            <span className="text-white font-bold text-2xl">E</span>
-                        </div>
-                        <span className="text-xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">ntrick</span>
+                    <Link href="/" className="flex items-center group transition-transform hover:scale-105">
+                        <Image
+                            src="/image/entrick logo.png"
+                            alt="Entrick Information Systems Logo"
+                            width={160}
+                            height={40}
+                            className="object-contain"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}
