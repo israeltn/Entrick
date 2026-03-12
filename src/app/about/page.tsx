@@ -162,7 +162,7 @@ export default function AboutPage() {
             </section>
 
             {/* Team Section */}
-            <section className="py-24">
+            {/* <section className="py-24">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-xl md:text-2xl font-black text-black tracking-tight mb-4">Meet Our Dedicated Team</h2>
                     <p className="text-gray-500 text-base max-w-2xl mx-auto mb-20 font-medium">
@@ -186,7 +186,7 @@ export default function AboutPage() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Success Stories Section */}
             <section className="py-24">

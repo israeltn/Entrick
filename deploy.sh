@@ -48,3 +48,13 @@ echo "---------------------------------------------------"
 # git reset --hard origin/main
 # 2. Pull just to be sure
 # git pull origin main
+
+
+
+Entrick Information Systems engineers Domain-Specific Private AI for SME and enterprise scaling. We bridge pioneering AI research with implementation through a holistic ecosystem.
+
+Key Services: 🔹Bespoke AI Agents & LLM Fine-tuning 🔹AI Research & Custom Software 🔹Enterprise Cybersecurity 🔹Managed Infrastructure & IT Training
+
+We prioritize sovereign, privacy-first AI with Zero Trust security. Our mission: engineering the future of intelligent enterprise. 🚀
+
+Tagline Suggestion (for the header): Domain-Specific Private AI for SME and Enterprise Scaling.
