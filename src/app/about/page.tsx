@@ -54,18 +54,18 @@ const values = [
     },
 ];
 
-const team = [
-    { name: 'Nguuma I. Tyokaha', role: 'Founder', image: '' },
-    { name: 'Omoyokan Adenomor', role: 'Chief technology officer', image: '' },
-    { name: 'Chisom Chima', role: 'Principal Software Engineer', image: '' },
+// const team = [
+//     { name: 'Nguuma I. Tyokaha', role: 'Founder', image: '' },
+//     { name: 'Omoyokan Adenomor', role: 'Chief technology officer', image: '' },
+//     { name: 'Chisom Chima', role: 'Principal Software Engineer', image: '' },
 
 
-    // { name: 'Albert Flores', role: 'UX Designer', image: '' },
-    // { name: 'Robert Fox', role: 'DevOps Engineer', image: '' },
-    // { name: 'Kathryn Murphy', role: 'Founder & CEO', image: '' },
-    // { name: 'Kristin Watson', role: 'Product Manager', image: '' },
-    // { name: 'Jenny Wilson', role: 'Data Scientist', image: '' },
-];
+//     // { name: 'Albert Flores', role: 'UX Designer', image: '' },
+//     // { name: 'Robert Fox', role: 'DevOps Engineer', image: '' },
+//     // { name: 'Kathryn Murphy', role: 'Founder & CEO', image: '' },
+//     // { name: 'Kristin Watson', role: 'Product Manager', image: '' },
+//     // { name: 'Jenny Wilson', role: 'Data Scientist', image: '' },
+// ];
 
 const successStories = [
     {
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl md:text-5xl font-black text-black tracking-tight mb-4">Entrick Success Stories</h2>
                     <p className="text-gray-500 max-w-2xl mx-auto mb-20 font-medium font-base">
-                        Join thousands of businesses leveraging Entrick\'s AI-powered automation to revolutionize their workflows.
+                        Join thousands of businesses leveraging Entrick's AI-powered automation to revolutionize their workflows.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">

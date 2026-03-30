@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CTASection from '@/components/sections/CTASection';
+import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
     title: 'Contact Us',
@@ -30,38 +31,7 @@ export default function ContactPage() {
                         {/* Contact Form */}
                         <div>
                             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8">Get in Touch</h2>
-                            <form className="space-y-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                                        <input type="text" id="name" name="name" required
-                                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#DC2626] focus:border-transparent outline-none transition-all"
-                                            placeholder="Enter full name" />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                                        <input type="email" id="email" name="email" required
-                                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#DC2626] focus:border-transparent outline-none transition-all"
-                                            placeholder="Enter email address" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                                    <input type="text" id="company" name="company"
-                                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#DC2626] focus:border-transparent outline-none transition-all"
-                                        placeholder="Your company name" />
-                                </div>
-                                <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                                    <textarea id="message" name="message" rows={5} required
-                                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#DC2626] focus:border-transparent outline-none transition-all resize-none"
-                                        placeholder="Tell us about your project and how we can help" />
-                                </div>
-                                <button type="submit"
-                                    className="w-full bg-[#DC2626] text-white py-4 px-8 rounded-lg font-semibold hover:bg-[#B91C1C] transition-colors duration-300">
-                                    Start your journey
-                                </button>
-                            </form>
+                            <ContactForm />
                         </div>
 
                         {/* Contact Info */}
@@ -106,7 +76,7 @@ export default function ContactPage() {
                                     <div className="flex gap-2">
                                         <input type="email" placeholder="Enter your email"
                                             className="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#DC2626] focus:border-transparent outline-none" />
-                                        <button className="px-6 py-3 bg-[#DC2626] text-white rounded-lg hover:bg-[#B91C1C] transition-colors font-medium">
+                                        <button type="button" className="px-6 py-3 bg-[#DC2626] text-white rounded-lg hover:bg-[#B91C1C] transition-colors font-medium">
                                             Subscribe
                                         </button>
                                     </div>

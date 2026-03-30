@@ -35,6 +35,10 @@ echo "🔄 Restarting PM2 process on Port 3001..."
 pm2 delete $APP_NAME || true
 PORT=3001 pm2 start .next/standalone/server.js --name "$APP_NAME"
 
+git pull origin main
+pm2 delete entrick
+pm2 start npm --name "entrick" -- start -- -p 8080
+
 # Save PM2 state
 pm2 save
 

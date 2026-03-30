@@ -7,12 +7,15 @@ import { usePathname } from 'next/navigation';
 import Button from '../ui/Button';
 
 const navigation = [
-    { name: '', href: '/' },
+    { name: '', href: '/' },   
     // { name: 'Pitch Deck', href: '/pitch' },
-    // { name: 'About', href: '/about' },
-    // { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
     // { name: 'Agents', href: '/agents' },
-    // { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
+     
+    
 ];
 
 export default function Header() {
