@@ -62,3 +62,30 @@ Key Services: 🔹Bespoke AI Agents & LLM Fine-tuning 🔹AI Research & Custom S
 We prioritize sovereign, privacy-first AI with Zero Trust security. Our mission: engineering the future of intelligent enterprise. 🚀
 
 Tagline Suggestion (for the header): Domain-Specific Private AI for SME and Enterprise Scaling.
+
+
+git pull origin main
+npm ci
+npm run build
+cp -r public .next/standalone/
+cp -r .next/static .next/standalone/.next/
+pm2 delete entricksystems || true
+PORT=3001 pm2 start .next/standalone/server.js --name "entricksystems"
+pm2 save
+
+
+# SSH in
+cd /home/entricksystems/htdocs/entricksystems.com
+git pull origin main
+
+# Create the env file
+echo "NEXT_PUBLIC_API_URL=https://api.entricksystems.com/api" > .env.local
+
+npm ci
+npm run build
+cp -r public .next/standalone/
+cp -r .next/static .next/standalone/.next/
+
+PORT=3001 pm2 start .next/standalone/server.js --name "entricksystems"
+pm2 save
+pm2 startup  # run the printed command to survive reboots
