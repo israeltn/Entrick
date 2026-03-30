@@ -83,9 +83,16 @@ echo "NEXT_PUBLIC_API_URL=https://api.entricksystems.com/api" > .env.local
 
 npm ci
 npm run build
+
+##Main for production
+# Make sure static assets are in standalone (required for standalone mode)
+git stash
+git pull origin main
+npm ci
+npm run build
 cp -r public .next/standalone/
 cp -r .next/static .next/standalone/.next/
-
-PORT=3001 pm2 start .next/standalone/server.js --name "entricksystems"
+pm2 delete entrick
+PORT=3001 pm2 start .next/standalone/server.js --name "entrick"
 pm2 save
-pm2 startup  # run the printed command to survive reboots
+
