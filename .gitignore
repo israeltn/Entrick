@@ -1,4 +1,7 @@
-﻿venv/
+﻿.next/
+.env.local
+.env.development
+venv/
 __pycache__/
 *.pyc
 db.sqlite3
