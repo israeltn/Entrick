@@ -104,11 +104,13 @@ export default async function BlogPostPage({
                             <span className="text-gray-900 font-medium">{post.author_name}</span>
                         </div>
                         <span>
-                            {new Date(post.published_at).toLocaleDateString('en-GB', {
-                                day: 'numeric',
-                                month: 'long',
-                                year: 'numeric',
-                            })}
+                            {post.published_at
+                                ? new Date(post.published_at).toLocaleDateString('en-GB', {
+                                    day: 'numeric',
+                                    month: 'long',
+                                    year: 'numeric',
+                                })
+                                : '—'}
                         </span>
                         <span>{post.reading_time} min read</span>
 

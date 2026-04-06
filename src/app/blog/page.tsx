@@ -75,11 +75,13 @@ function PostCard({ post }: { post: PostListItem }) {
                     <div className="flex items-center gap-3 text-gray-500 text-[10px]">
                         <span>{post.reading_time} min read</span>
                         <span>
-                            {new Date(post.published_at).toLocaleDateString('en-GB', {
-                                day: 'numeric',
-                                month: 'short',
-                                year: 'numeric',
-                            })}
+                            {post.published_at
+                                ? new Date(post.published_at).toLocaleDateString('en-GB', {
+                                    day: 'numeric',
+                                    month: 'short',
+                                    year: 'numeric',
+                                })
+                                : '—'}
                         </span>
                     </div>
                 </div>
