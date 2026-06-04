@@ -39,15 +39,16 @@ export default function Header() {
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center group transition-transform hover:scale-105">
+                    <Link href="/" className="flex mb-2.5 items-center group transition-transform hover:scale-105">
                         <Image
-                            src="/image/entrick logo.png"
+                            src="/image/entricklogo.png"
                             alt="Entrick Information Systems Logo"
-                            width={160}
-                            height={40}
+                            width={30}
+                            height={10}
                             className="object-contain"
                             priority
                         />
+                        <h1 className="ml-1 text-md font-semibold text-white group-hover:text-primary transition-colors"> ntrick </h1>
                     </Link>
 
                     {/* Desktop Navigation */}

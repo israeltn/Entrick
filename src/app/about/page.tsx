@@ -122,7 +122,7 @@ export default function AboutPage() {
                                 </div>
                                 <h2 className="text-4xl font-black text-black mb-8 tracking-tight">Our Mission</h2>
                                 <p className="text-gray-500 text-lg leading-relaxed font-medium">
-                                    At Entrick, our mission is to democratize AI-powered automation, enabling businesses of all sizes to streamline operations, boost productivity, and scale efficiently. We believe that AI should be accessible, simple, and transformative—helping companies focus on growth while AI handles repetitive tasks.
+                                    At Entrick, our mission is to democratize AI-powered automation, enabling businesses of all sizes to streamline operations, boost productivity, and scale efficiently. We believe that AI should be accessible, simple, and transformative helping companies focus on growth while AI handles repetitive tasks.
                                 </p>
                             </div>
                             <div className="relative aspect-video lg:aspect-square bg-gray-50 rounded-3xl overflow-hidden shadow-2xl">

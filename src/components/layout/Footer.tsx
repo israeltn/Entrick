@@ -57,15 +57,19 @@ export default function Footer() {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 lg:gap-16">
                     {/* Brand */}
                     <div className="col-span-2 lg:col-span-1">
-                        <Link href="/" className="flex items-center mb-8 transition-transform hover:scale-105 inline-block">
-                            <Image
-                                src="/image/entrick logo.png"
-                                alt="Entrick Information Systems Logo"
-                                width={160}
-                                height={40}
-                                className="object-contain"
-                            />
-                        </Link>
+                       {/* Logo */}
+                    <Link href="/" className="flex mb-3 items-center group transition-transform hover:scale-105">
+                        <Image
+                            src="/image/entricklogo.png"
+                            alt="Entrick Information Systems Logo"
+                            width={30}
+                            height={10}
+                            className="object-contain"
+                            priority
+                        />
+                        <h1 className="ml-1 text-md font-semibold text-white group-hover:text-primary transition-colors"> ntrick </h1>
+                    </Link>
+
                         <p className="text-muted text-sm leading-relaxed mb-8 max-w-xs">
                             Empowering tomorrow with Intelligent IT solutions. Modern software, secure systems, and intelligent automation.
                         </p>
